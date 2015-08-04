@@ -45,8 +45,15 @@
                 </div>
             </div>
             <div class="container left">                
-                <a href="#choose" class="btn-large" style="border: 2px solid orange; background: 0;">Get Started</a>
-                <a class="btn-large" href="#tweets" style="border: 2px solid cyan; background: 0;">Show Tweets</a>
+                <a href="#choose" class="btn-large" style="border: 2px solid orange; background: 0; font-size: 0.7em !important;">Get Started</a>
+                <a class="btn-large" href="#tweets" style="border: 2px solid cyan; background: 0; font-size: 0.7em !important;">Show Tweets</a>
+                <a class="btn-large tooltipped" data-position="bottom" data-tooltip="Sadly, not yet available"
+                   href="#" style="border: 2px solid red; background: 0; font-size: 0.7em !important;"
+                   onclick="Materialize.toast('Not yet available, but fortunately the answer you are looking for might be Software Technology - Laurenz',
+                            4000, 
+                            'light-green accent-3 black-text')">
+                    Specialization Adviser
+                </a>
             </div>
         </div>
         <!-- 
@@ -259,7 +266,7 @@
         <script>            
           $(function(){
               $(".element").typed({                
-                  strings: ["^1000 COMPUTER SYSTEMS ENGINEERING","^1000 INSTRUCTIONAL SYSTEMS TECHNOLOGY", "^1000 NETWORK ENGINEERING", "^1000 SOFTWARE TECHNOLOGY" ],
+                  strings: ["^1000 COMPUTER SYSTEMS ENGINEERING","^1000 INSTRUCTIONAL SYSTEMS TECH.", "^1000 NETWORK ENGINEERING", "^1000 SOFTWARE TECHNOLOGY" ],
                   typeSpeed: 0,
                   loop: true,
                   showCursor: false
