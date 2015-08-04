@@ -197,11 +197,12 @@
                             Do browse their projects on Github (including mine) and go out and build stuff!
                             <br>
                             - Laurenz
-                        </h5>                        
+                            
+                        </h5> 
                     </div>
                 </div>
                 <div class="pushdown-5p"></div>
-                <div class="row center">
+                <div class="row center">                    
                     <h3 data-sr="reset hustle 30%" class="roboto-300 center">
                         "Logic will get you from A to B,<br>
                         <b>imagination</b> will take you everywhere"
@@ -223,6 +224,11 @@
             </div>
           </div>
         </footer>
+        <!-- blooper elevator button -->
+        <a class="waves-effect waves-light btn blue-grey darken-4 elevator-button"
+           style="font-size: 0.5em; width: 100%; position: fixed; bottom: 0px;">
+            PRESS ME TO GO BACK TO THE TOP >:) !! 
+        </a>
         <!-- 
         Start of Below the fold content
         -->
@@ -231,6 +237,7 @@
         <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
         <script src="3d-fold/js/main.js"></script> <!-- Resource jQuery -->
         <script src="3d-fold/js/modernizr.js"></script>
+        <script src="js/elevator.js"></script>
       	<script type="text/javascript" src="js/materialize.min.js"></script>
       	<script type="text/javascript">
       		$(document).ready(function(){
@@ -239,9 +246,19 @@
       	</script>
         <script src='js/scrollReveal.min.js'></script>
         <script>
+            window.sr = new scrollReveal();
+        </script>        
 
-          window.sr = new scrollReveal();
+        <script>
+        // Elevator script included on the page, already.
 
+            window.onload = function() {
+                var elevator = new Elevator({
+                    element: document.querySelector('.elevator-button'),
+                    mainAudio: 'assets/music/elevator.mp3',
+                    endAudio: 'assets/music/ding.mp3'
+                });
+            }
         </script>
         <!-- Use laurenz.js to edit particles.js config -->
         <script src="js/particles.js"></script>
@@ -257,7 +274,6 @@
                   showCursor: false
               });
           });
-        </script>
-        <script src="3d-fold/js/main.js"></script> <!-- Resource jQuery -->
+        </script>        
     </body>
 </html>
